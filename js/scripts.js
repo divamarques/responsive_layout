@@ -77,3 +77,16 @@ document.querySelector(".close-modal").addEventListener("click", () => {
   modal.querySelector("iframe").src = ``;
   document.querySelector("body").style.overflow = "initial";
 });
+
+// Make toast
+
+function snackShow() {
+  const toast = document.getElementById("snackbar")
+
+  toast.className = "show";
+
+  setTimeout(function (){
+    toast.className = toast.className.replace("show", "");
+  }, 3000);
+}
+
